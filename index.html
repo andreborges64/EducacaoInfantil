@@ -1,0 +1,232 @@
+<!-- 
+    - Faculdade de Tecnologia de Lins Prof. Antônio Seabra
+    - Autor: André Luiz Silva Dias Borges
+
+    - Página Principal do Site
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Stiles.css" type="text/css">
+    <link rel="icon" href="IMG/01LogoReta.png">
+    <title>ABC Escola Infantil</title>
+</head>
+<body onload="iniciarSite()">
+    
+    <header class="topo">
+        <div id="chamada">
+            <img src="IMG/01LogoReta.png" id="logo" alt="Logo da Instituição de Artes Marciais André Luiz Borges">
+            <h1>Uma escola para o futuro de seus filhos!</h1>
+        </div>
+        <nav>
+            <ul id="navbar">
+                <h2 class="menu">MENU</h2>
+                <li class="itemmenu" onclick="matriculaClick()">Matrícula</li>
+                <li class="itemmenu" onclick="localizacaoClick()">Localização</li>
+                <li class="itemmenu" onclick="identidadeClick()">Quem somos</li>
+                <li class="itemmenu" onclick="servicosClick()">Nossos serviços</li>
+                <li class="itemmenu" onclick="galeriaClick()">Galeria</li>
+            </ul>
+        </nav>
+    </header>
+    <!---->
+    <main>
+        <!-- <div class="bg">
+            <img src="/IMG/1-background.jpg" alt="background" id="bg">
+        </div> -->
+        
+        <div class="aba" id="matricula">
+            <form id="ficha-matricula">
+                <fieldset id="ficha-pai">
+                    <label for="pai">Nome do pai:</label>
+                    <input type="text" id="pai" name="nome completo"><br>
+                    <label for="cpf-pai">CPF do pai:</label>
+                    <input type="text" name="cpf-pai" placeholder="123.456.789-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required><br>
+                    <label for="rg-pai">RG do pai:</label>
+                    <input type="text" id="rg-pai" placeholder="12.345.678-9" pattern="\d{2}\.\d{3}\.\d{3}-\d{1}"><br><br>
+                </fieldset>
+                <fieldset id="ficha-mae">
+                    <label for="mae">Nome da mãe:</label>
+                    <input type="text" id="mae" name="nome completo"><br>
+                    <label for="cpf-mae">CPF da mãe:</label>
+                    <input type="text" name="cpf-mae" placeholder="123.456.789-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"><br>
+                    <label for="rg-mae">RG da mae:</label>
+                    <input type="text" id="rg-mae" placeholder="12.345.678-9" pattern="\d{2}\.\d{3}\.\d{3}-\d{1}"><br><br>
+                </fieldset>
+                <fieldset id="ficha-crianca">
+                    <label for="crianca">Nome da criança:</label>
+                    <input type="text" id="crianca" name="nome completo"><br>
+                    <label for="cpf-crianca">CPF da criança:</label>
+                    <input type="text" name="cpf-crianca" placeholder="123.456.789-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"><br>
+                    <label for="rg-crianca">RG da criança:</label>
+                    <input type="text" id="rg-crianca" placeholder="12.345.678-9" pattern="\d{2}\.\d{3}\.\d{3}-\d{1}">
+                    <label for="data-nasc">Data de nascimento:</label>
+                    <input id="data-nasc" type="date" placeholder="dd-mm-yyyy"><br><br><br>
+                    <label for="sexo" id="sexo-crianca">Sexo:<br>
+                        <input type="radio" id="sexo" name="sexo" value="M">Masculino
+                        <input type="radio" id="sexo" name="sexo" value="F">Feminino
+                    <br>
+                </label>
+                    <br>
+
+                    <label for="conformidade" id="conformidade-crianca">Portador/a de conformidades
+                        <input id="conformidade-radio" type="checkbox" name="conformidade" value="S">
+                    </label>
+                </fieldset>
+                <fieldset id="ficha-endereco">
+                Endereço:<br><br>
+                    <label for="rua">Rua:
+                        <input type="text" id="rua">
+                    </label>
+                    <label for="numero-casa">Número:
+                        <input type="text" id="n-casa">
+                    </label>
+                    <label for="bairro">Bairro:
+                        <input type="text" id="bairro">
+                    </label>
+                    <label for="cidade">Cidade:
+                        <input type="text" id="cidade">
+                    </label>
+                </fieldset>
+                <button id="botao-enviar" onclick="enviarCadastro()">Enviar</button>
+            </form>
+        </div><!---->
+        <div class="aba" id="localizacao">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14828.452476779396!2d-49.7502255!3d-21.6983313!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94be15ecb135a5dd%3A0x66b807178c781125!2sFATEC%20Lins!5e0!3m2!1spt-BR!2sbr!4v1679755713542!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div><!---->
+        <br>
+        <div class="aba" id="quem-somos">
+            <div class="backg">
+                <p>Com mais de 15 anos de jornada, somos uma escola dedicada ao ensino infantil de qualidade. 
+                    Contando com professores autamente dedicados e capacitados para que seu filho aprenda se divertindo.</p>
+                <p>Possuindo mais de 20 salas de aula com 150m quadrados, um amplo refeitório e área de lazer, para garantir melhor
+                    conforto aos alunos aqui matrículados.
+                </p>
+                <p>Nossa ambiente possui professores capacitados e especializados em diversas matérias adcionais que podem ajudar seu 
+                    filho a se desenvolver melhor.</p>
+                <p>Matérias essas como:</p>
+                <ul id="list-materia">
+                    <li id="lista-materia">Espanhol</li>
+                    <li id="lista-materia">Japonês</li>
+                    <li id="lista-materia">Música</li>
+                    <li id="lista-materia">Dança</li>
+                    <li id="lista-materia">Programação para crianças</li>
+                </ul>
+                <p>Temos como missão proporcionar projetos escolares para dar  maior autonomia ao aluno; trabalhar a autoestima.</p>
+                <p>Contudo o objetivo é construir um ambiente escolar acolhedor e  dar experiências diferenciadas e eficientes para o desenvolvimento 
+                    do estudante.</p>
+            </div>
+        </div><!---->
+        <br>
+        <div class="aba" id="servicos">
+            <h4>Pré escola</h4>
+            <p>Feito para crianças de 1 a 6 ano, que compreende o maternal e o jardim de infância, cujo propósito é prepará-las
+                através de atividades educativas para o ingresso nos ensinos posteriores.
+            </p>
+            <h4>Fundamental I</h4>
+            <p>2º ao 5º ano do ensino fundamental, com intuito preparar os alunos tanto no quseito acadêmico quanto no presoal e
+                social. É nesta etapa que os aluno começam a aprender os conceitos educacionais.
+            </p>
+            <h4>Fundamental II</h4>
+            <p>Nesta etapa, os tópicos estudados servem para preparar os alunos para a chegada da proxima fase, o ensino médio.</p>
+        </div>
+        <br>
+        <ul class="aba" id="galeria">
+            <li class="li-figura">
+                <figure id="figura">
+                    <img id="img-galeria" src="IMG/03-parquinho.jpg" alt="Imagem de um dos parques da escola">
+                    <figcaption>Uma de nossas areas de lazer.</figcaption>
+                </figure>
+            </li>
+           <li class="li-figura"> 
+                <figure id="figura">
+                    <img id="img-galeria" src="IMG/04-parquinho2.jpg" alt="Imagem de outro dos parques da escola">
+                    <figcaption>Segundo parque.</figcaption>
+                </figure>
+            </li>
+            <li class="li-figura">
+                <figure id="figura">
+                    <img id="img-galeria" src="IMG/05-aula-artes.jpg" alt="Aula de artes">
+                    <figcaption>Aula de educação artistica.</figcaption>
+                </figure>
+            </li></li>
+            <li class="li-figura">
+                <figure id="figura">
+                    <img id="img-galeria" src="IMG/06-reuniao-pais.jpg" alt="Reunião de pais e filhos">
+                    <figcaption>Reunião de pais e filhos.</figcaption>
+                </figure>
+            </li>
+            <li class="li-figura">
+                <figure id="figura">
+                    <img id="img-galeria" src="IMG/07-aula-por-figura.jpg" alt="Aula recreativa com figuras">
+                <figcaption>Aula com figuras.</figcaption>
+                </figure>
+            </li>
+            <li class="li-figura">
+                <figure id="figura">
+                    <img id="img-galeria" src="IMG/08-aula-historia.jpg" alt="Aula de história">
+                <figcaption>Aulas de história.</figcaption>
+                </figure>
+            </li>
+           <li class="li-figura">
+                <figure id="figura">
+                    <img id="img-galeria" src="IMG/09-aula-ingles.jpg" alt="Aula de Inglês">
+                <figcaption>Uma segunda lingua.</figcaption>
+            </figure>
+           </li>
+            <li class="li-figura">
+                <figure id="figura">
+                    <img id="img-galeria" src="IMG/10-aula.jpg" alt="Aula">
+                    <figcaption>Ambiente confortável para se estudar.</figcaption>
+                </figure>
+            </li>
+            <li class="li-figura">
+                <figure id="figura">
+                    <img id="img-galeria" src="IMG/11-atividade-entre-salas.jpg" alt="Atividade entre salas">
+                <figcaption>Atividades para trabalhar entre salas.</figcaption>
+                </figure>   
+            </li>
+            <li class="li-figura">
+                <figure id="figura">
+                    <img id="img-galeria" src="IMG/12-ecologia.jpg" alt="Aula de ecologia">
+                    <figcaption>Insentivando a cuidar melhor do planeta.</figcaption>
+                </figure>
+            </li>
+            <li class="li-figura">
+                <figure id="figura">
+                    <img id="img-galeria" src="IMG/13-educacao-fisica.jpg" alt="Educação Física">
+                <figcaption>Interação com esportes.</figcaption>
+                </figure>
+            </li>
+            <li class="li-figura">
+                <figure id="figura">
+                    <img id="img-galeria" src="IMG/14-atividade-argila.jpg" alt="Atividade com Argila">
+                    <figcaption>Aula artistica com argila.</figcaption>
+                </figure>
+            </li>l
+            <li class="li-figura">
+                <figure id="figura">
+                    <img id="img-galeria" src="IMG/15-brincar.jpg" alt="Alunos brincando">
+                <figcaption>Momento de diversão.</figcaption>
+            </figure>
+            </li>
+            <li class="li-figura">
+                <figure id="figura">
+                    <img id="img-galeria" src="IMG/16-brincar2.jpg" alt="Alunos brincando">
+                    <figcaption>Brincadeiras ao ar livre.</figcaption>
+                </figure>
+            </li>
+        </ul><!---->
+    </main>
+    <footer>
+        <p>Este site ficticio foi produzido por</p>
+        <p>André Luiz Silva Dias Borges</p>
+    </footer>
+    
+</body>
+<script src="/JS/scripts.js"></script>
+</html>
